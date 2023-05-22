@@ -21,7 +21,7 @@ export default function LeftSide() {
     return (
         <div className="hidden sm:flex flex-col items-center xl:items-start xl:w-[280px] p-2 fixed h-full">
             <div className="flex items-center cursor-pointer justify-center bg-black w-14 h-14 hover:bg-opacity-[0.5] hover:bg-gray-800 rounded-full py-4 cursor:pointer transition duration-200">
-                <Image src="https://rb.gy/ogau5a" alt="" height={30} width={30} />
+                <img src="https://rb.gy/ogau5a" alt="" height={30} width={30} />
             </div>
             <div className="space-y-2 mt-4">
                 <SideMenu Icon={HomeIcon} className="self-start" text="Home" />

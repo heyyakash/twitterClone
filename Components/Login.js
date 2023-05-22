@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 function Login({ providers }) {
     return (
         <div className="h-full fixed w-full flex items-center cursor-pointer justify-center bg-black flex-col gap-8 ">
-            <Image src="https://rb.gy/ogau5a" alt="" height={150} width={150} />
+            <img src="https://rb.gy/ogau5a" alt="" height={150} width={150} />
 
             {Object.values(providers).map(provider => (
                 <div key={provider.name}>

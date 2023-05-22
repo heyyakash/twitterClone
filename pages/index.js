@@ -5,7 +5,7 @@ import { getProviders, getSession, useSession } from "next-auth/react"
 import LeftSide from '../Components/LeftSide'
 import Modal from '../Components/Modal'
 
-export default function Home({trendingResult, followResults,providers}) {
+export default function Home({providers}) {
   const { data: session } = useSession();
   if(!session) return <Login providers = {providers} />
   
@@ -26,18 +26,18 @@ export default function Home({trendingResult, followResults,providers}) {
 }
 
 export async function getServerSideProps(context) {
-  const trendingResult = await fetch("https://jsonkeeper.com/b/NKEV").then(
-    (res) => res.json()
-  );
-  const followResults = await fetch("https://jsonkeeper.com/b/WWMJ").then(
-    (res) => res.json()
-  );
+  // const trendingResult = await fetch("https://jsonkeeper.com/b/NKEV").then(
+  //   (res) => res.json()
+  // );
+  // const followResults = await fetch("https://jsonkeeper.com/b/WWMJ").then(
+  //   (res) => res.json()
+  // );
   const session = await getSession(context);
   const providers = await getProviders();
   return {
     props:{
-      trendingResult,
-      followResults,
+      // trendingResult,
+      // followResults,
       session,
       providers
     }
